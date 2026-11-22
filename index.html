@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Guntur Ramadhan | Mahasiswa Sistem Informasi UMB</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portofolio profesional Muhamad Guntur Ramadhan, Mahasiswa Sistem Informasi Universitas Muhammadiyah Bengkulu. Menampilkan proyek inovatif, keahlian akademis, dan rekam jejak teknologi.">
+    <meta name="keywords" content="Muhamad Guntur Ramadhan, Guntur, Sistem Informasi, Portofolio Web, UMB Bengkulu, Glassmorphism, Responsive Web Design">
+    <meta name="author" content="Muhamad Guntur Ramadhan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhamad Guntur Ramadhan | Mahasiswa Sistem Informasi">
+    <meta property="og:description" content="Jelajahi proyek web, keahlian teknologi, dan perjalanan profesional Muhamad Guntur Ramadhan.">
+    <meta property="og:image" content="pelepasan.jpeg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-umb.png">
+    <link rel="apple-touch-icon" href="logo-umb.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=3.26">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tema Turf (balap) -->
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-bg" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <div class="video-bg-overlay"></div>
+    </div>
+
+    <!-- Elemen lama (blob & partikel) dinonaktifkan agar script.js tetap aman -->
+    <div class="blob-bg" style="display:none">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <canvas id="particleCanvas" class="particle-canvas" style="display:none"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="logo-umb.png" alt="Logo Universitas Muhammadiyah Bengkulu" class="nav-logo"><span class="logo-text">GUNTUR<span>.DEV</span></span></a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#experience" class="nav-link">Pengalaman</a>
+                <a href="#certificates" class="nav-link">Dokumentasi</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <div class="nav-indicator" id="navIndicator"></div>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Accent Switcher -->
+                <div class="theme-switcher">
+                    <button class="theme-btn active" data-theme="violet" title="Tema Violet"></button>
+                    <button class="theme-btn" data-theme="cyan" title="Tema Cyan"></button>
+                    <button class="theme-btn" data-theme="emerald" title="Tema Emerald"></button>
+                    <button class="theme-btn" data-theme="amber" title="Tema Amber"></button>
+                    <button class="theme-btn" data-theme="turf" title="Tema Turf (Balap)"></button>
+                </div>
+                <a href="#contact" class="btn-primary btn-sm">Hubungi Saya</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title scroll-reveal">
+                        Hai, Saya <span class="gradient-text">Muhamad Guntur Ramadhan</span>
+                    </h1>
+                    <h2 class="hero-subtitle scroll-reveal">
+                        Saya seorang <span id="typewriter" class="gradient-text-alt">Mahasiswa Sistem Informasi</span>
+                    </h2>
+                    <p class="hero-desc scroll-reveal">
+                        Saya ingin fokus pada pengembangan sistem perangkat lunak, perancangan basis data, analisis sistem informasi, dan teknologi jaringan modern.
+                    </p>
+                    <div class="hero-buttons scroll-reveal">
+                        <a href="#about" class="btn-primary">Tentang Saya <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links scroll-reveal" style="margin-top: 2rem;">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/firebolt491?gwpx=bWc4bGdqZGZkN2lx" target="_blank" class="social-btn" style="width:auto;height:auto;padding:0.6rem 1.1rem;border-radius:999px;display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9rem;font-weight:600;" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@karyuufang?lang=id-ID" target="_blank" class="social-btn" style="width:auto;height:auto;padding:0.6rem 1.1rem;border-radius:999px;display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9rem;font-weight:600;" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.3-1.26-.7-2.3-1.7-3-2.94-.07 3.32-.03 6.64-.07 9.96-.06 1.8-.5 3.62-1.44 5.15-1.04 1.7-2.62 2.97-4.52 3.56-1.89.58-3.95.46-5.77-.32-1.8-1-3.23-2.64-3.96-4.57-.74-1.92-.7-4.1.1-5.97.83-1.92 2.4-3.47 4.35-4.22 1.65-.63 3.46-.71 5.17-.23v4.18c-.85-.24-1.76-.23-2.58.07-1 .38-1.84 1.14-2.27 2.1-.43.96-.46 2.07-.1 3.02.37.95 1.13 1.7 2.08 2.08.95.38 2.05.35 2.98-.07.93-.43 1.66-1.19 2-2.13.34-.94.39-1.97.38-2.96V0z"/>
+                            </svg>
+                            <span>TikTok</span>
+                        </a>
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/Karyu11286" target="_blank" rel="noopener noreferrer" class="social-btn" style="width:auto;height:auto;padding:0.6rem 1.1rem;border-radius:999px;display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9rem;font-weight:600;" aria-label="X">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                            </svg>
+                            <span>X</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual scroll-reveal">
+                    <div class="hero-card-wrapper">
+                        <!-- Glassmorphism interactive terminal card -->
+                        <div class="glass-card tech-card terminal-card">
+                            <div class="card-header">
+                                <div class="card-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="card-title">terminal.sh</span>
+                            </div>
+                            <div class="card-body terminal-body">
+                                <div class="terminal-output" id="terminalOutput">
+                                    <div class="terminal-line text-muted">Muhamad Guntur Ramadhan - Portfolio Terminal v2.0</div>
+                                    <div class="terminal-line text-muted">Ketik perintah <span class="keyword">help</span> atau klik tombol pintasan untuk berinteraksi.</div>
+                                    <br>
+                                </div>
+                                <div class="terminal-input-line">
+                                    <span class="terminal-prompt">visitor@guntur-dev:~$</span>
+                                    <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" placeholder="Ketik perintah di sini..." aria-label="Terminal Input">
+                                </div>
+                                <div class="terminal-shortcuts">
+                                    <button class="terminal-btn" data-cmd="help">help</button>
+                                    <button class="terminal-btn" data-cmd="about">about</button>
+                                    <button class="terminal-btn" data-cmd="skills">skills</button>
+                                    <button class="terminal-btn" data-cmd="clear">clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">TENTANG SAYA</span>
+                    <h2 class="section-title">Sekilas Tentang Perjalanan Saya</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Left Column: Student Profile Card -->
+                    <div class="about-profile-card glass-card scroll-reveal">
+                        <div class="profile-image-container">
+                            <img src="profile.jpeg" alt="Muhamad Guntur Ramadhan" class="profile-img">
+                        </div>
+                        <h3 class="profile-name">Muhamad Guntur Ramadhan</h3>
+                        <p class="profile-major">Mahasiswa Sistem Informasi</p>
+                        <button class="btn-primary btn-sm open-modal" data-modal="modal-cv"><i data-lucide="file-text"></i> Biodata Lengkap</button>
+                    </div>
+
+                    <!-- Right Column: Biography, Stats & Skills -->
+                    <div class="about-info-wrapper">
+                        <div class="about-info scroll-reveal">
+                            <p class="about-text">
+                                Dengan fondasi pendidikan kejuruan di bidang <em>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</em> dari SMKN 1 Kota Bengkulu. Hai, saya Guntur, lulusan SMK pada tahun 2026. Saya ingin menggabungkan keahlian infrastruktur jaringan, perancangan web responsif, web pemrograman, dan analisis sistem informasi untuk merancang solusi digital yang berdaya guna.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Modals -->
+        <!-- Modal 2: PKL -->
+        <div class="modal" id="modal-pkl" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Tutup"><i data-lucide="x"></i></button>
+                <div class="modal-grid">
+                    <div class="modal-gallery">
+                        <img src="pkl.jpeg" alt="Foto Kegiatan PKL" class="modal-img">
+                    </div>
+                    <div class="modal-details">
+                        <span class="modal-category">Praktik Kerja Lapangan / Waroeng USB NT.COM</span>
+                        <h3 class="modal-title">Teknisi Komputer & Jaringan (PKL)</h3>
+                        <p class="modal-desc">
+                            Menjalani Praktik Kerja Lapangan selama 4 bulan penuh di Waroeng USB NT.COM Bengkulu. Menangani pemeliharaan preventif, pembongkaran dan perakitan laptop, penggantian pasta termal dan layar LCD, instalasi ulang sistem operasi, serta pengaturan jaringan kabel UTP.
+                        </p>
+                        <h4 class="modal-subtitle">Ruang Lingkup Praktik</h4>
+                        <ul class="modal-features">
+                            <li>Troubleshooting perangkat keras laptop dan komputer desktop.</li>
+                            <li>Pemasangan dan konfigurasi jaringan LAN serta Wi-Fi client.</li>
+                            <li>Instalasi dan optimasi sistem operasi Windows & software penunjang.</li>
+                            <li>Pelayanan teknis dan konsultasi perangkat kepada pelanggan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3: UKK -->
+        <div class="modal" id="modal-ukk" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Tutup"><i data-lucide="x"></i></button>
+                <div class="modal-grid">
+                    <div class="modal-gallery">
+                        <img src="ukk.jpeg" alt="Uji Kompetensi Keahlian" class="modal-img" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="modal-details">
+                        <span class="modal-category">Uji Kompetensi Keahlian / TJKT</span>
+                        <h3 class="modal-title">Sertifikasi Kompetensi Kejuruan (UKK)</h3>
+                        <p class="modal-desc">
+                            Uji Kompetensi Keahlian resmi di SMKN 1 Kota Bengkulu bekerja sama dengan Samsung Tech Institute, menguji keahlian instalasi jaringan komputer, routing, switching, dan standar keselamatan kerja IT.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CV Biodata Modal -->
+        <div class="modal" id="modal-cv" role="dialog" aria-modal="true">
+            <div class="modal-content" style="max-width: 600px;">
+                <button class="close-modal-btn" aria-label="Tutup"><i data-lucide="x"></i></button>
+                <div class="modal-details" style="padding: 2.5rem; text-align: left;">
+                    <span class="modal-category" style="margin-bottom: 0.5rem;">Biodata Pribadi</span>
+                    <h3 class="modal-title" style="margin-bottom: 1.5rem;">Muhamad Guntur Ramadhan</h3>
+                    <div style="width: 11rem; height: 11rem; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-color); box-shadow: 0 0 20px rgba(var(--accent-color-rgb), 0.3); margin: 0 auto 1.5rem;">
+                        <img src="profile.jpeg" alt="Foto Guntur" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <ul style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; list-style: none; padding: 0;">
+                        <li><strong>Nama Lengkap:</strong> Muhamad Guntur Ramadhan</li>
+                        <li><strong>Nama Panggilan:</strong> Guntur</li>
+                        <li><strong>NPM:</strong> 2657201021</li>
+                        <li><strong>Program Studi:</strong> Sistem Informasi</li>
+                        <li><strong>Perguruan Tinggi:</strong> Universitas Muhammadiyah Bengkulu</li>
+                        <li><strong>Fakultas:</strong> Teknik</li>
+                        <li><strong>Agama:</strong> Islam</li>
+                        <li><strong>Lokasi:</strong> Kota Bengkulu, Indonesia</li>
+                        <li><strong>Minat:</strong> Web Programming, Network & IT Support, Video Editing, Gaming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience/Timeline Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">REKAM JEJAK</span>
+                    <h2 class="section-title">Pendidikan & Pengalaman</h2>
+                </div>
+
+                <div class="experience-grid scroll-reveal">
+                    <!-- Column 1: Riwayat Studi -->
+                    <div class="experience-column">
+                        <h3 class="experience-column-title"><i data-lucide="graduation-cap"></i> Riwayat Pendidikan</h3>
+                        <div class="timeline">
+                            <!-- Timeline Item 1: UMB -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026 - Sekarang</div>
+                                <div class="timeline-body">
+                                    <div class="timeline-body-flex">
+                                        <div>
+                                            <h3 class="timeline-title">S1 Sistem Informasi</h3>
+                                            <h4 class="timeline-company">Universitas Muhammadiyah Bengkulu (UMB)</h4>
+                                            <p class="timeline-desc">
+                                                Mempelajari dasar-dasar pemrograman web, perancangan basis data, logika algoritma, dan arsitektur sistem informasi modern.
+                                            </p>
+                                        </div>
+                                        <img src="logo-umb.png" alt="Logo Universitas Muhammadiyah Bengkulu" class="timeline-logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 2: SMKN 1 Kota Bengkulu -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2023 - 2026</div>
+                                <div class="timeline-body">
+                                    <div class="timeline-body-flex">
+                                        <div>
+                                            <h3 class="timeline-title">Teknik Jaringan Komputer & Telekomunikasi (TJKT)</h3>
+                                            <h4 class="timeline-company">SMKN 1 KOTA BENGKULU</h4>
+                                            <p class="timeline-desc">
+                                                Menyelesaikan pendidikan menengah kejuruan dengan fokus pada instalasi jaringan komputer, konfigurasi router/switch, perakitan PC, dan administrasi server.
+                                            </p>
+                                        </div>
+                                        <img src="logo-smkn1.png" alt="Logo SMKN 1 Kota Bengkulu" class="timeline-logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 3: SMPN 13 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2020 - 2023</div>
+                                <div class="timeline-body">
+                                    <div class="timeline-body-flex">
+                                        <div>
+                                            <h3 class="timeline-title">Sekolah Menengah Pertama</h3>
+                                            <h4 class="timeline-company">SMPN 13 KOTA BENGKULU</h4>
+                                            <p class="timeline-desc">
+                                                Menempuh pendidikan dasar menengah pertama dan mulai mengeksplorasi minat dalam dunia komputer dan teknologi informasi.
+                                            </p>
+                                        </div>
+                                        <img src="logo-smpn13.png" alt="Logo SMPN 13 Kota Bengkulu" class="timeline-logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 4: SDN 47 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2014 - 2020</div>
+                                <div class="timeline-body">
+                                    <h3 class="timeline-title">Sekolah Dasar</h3>
+                                    <h4 class="timeline-company">SDN 47 KOTA BENGKULU</h4>
+                                    <p class="timeline-desc">Pendidikan dasar 6 tahun.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Pengalaman Praktik -->
+                    <div class="experience-column">
+                        <h3 class="experience-column-title"><i data-lucide="briefcase"></i> Riwayat PKL Dan UKK</h3>
+                        <div class="timeline">
+                            <!-- Timeline Item: PKL Waroeng USB NT.COM -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">4 Bulan Masa PKL</div>
+                                <div class="timeline-body">
+                                    <div class="timeline-body-flex">
+                                        <div>
+                                    <h3 class="timeline-title">Teknisi Komputer & Jaringan</h3>
+                                    <h4 class="timeline-company">Waroeng USB NT.COM Bengkulu</h4>
+                                    <p class="timeline-desc" style="margin-bottom: 0.5rem;">
+                                        Melaksanakan Praktik Kerja Lapangan dengan fokus tugas:
+                                    </p>
+                                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.35rem;">
+                                        <li>Perakitan, pembongkaran, dan pembersihan komponen laptop serta komputer desktop.</li>
+                                        <li>Troubleshooting hardware rusak, penggantian keyboard, baterai, dan harddisk/SSD.</li>
+                                        <li>Instalasi sistem operasi Windows, driver perangkat, dan aplikasi pendukung kerja.</li>
+                                        <li>Pengkabelan dan crimping kabel jaringan UTP untuk koneksi jaringan toko.</li>
+                                    </ul>
+                                        </div>
+                                        <img src="logo-waroeng.png" alt="Logo Waroeng USB NT.COM" class="timeline-logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item: UKK Samsung Tech -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Tahun 2026</div>
+                                <div class="timeline-body">
+                                    <div class="timeline-body-flex">
+                                        <div>
+                                            <h3 class="timeline-title">Peserta UKK Samsung Tech Institute</h3>
+                                            <h4 class="timeline-company">SMKN 1 Kota Bengkulu</h4>
+                                            <p class="timeline-desc">
+                                                Menyelesaikan Uji Kompetensi Keahlian standar industri dengan hasil memuaskan pada kompetensi perakitan dan konfigurasi jaringan.
+                                            </p>
+                                        </div>
+                                        <img src="logo-samsung.png" alt="Logo Samsung Tech Institute" class="timeline-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates & Documentation Section -->
+        <section id="certificates" class="certificates">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">JEJAK DOKUMENTASI</span>
+                    <h2 class="section-title">Dokumentasi &amp; Sertifikat</h2>
+                </div>
+
+                <div class="certificates-grid scroll-reveal">
+                    <!-- Doc 1: UKK -->
+                    <div class="certificate-card">
+                        <div class="cert-img-wrapper open-modal" data-modal="modal-ukk" aria-label="Lihat Dokumentasi UKK">
+                            <img src="ukk.jpeg" alt="Uji Kompetensi Keahlian UKK" class="cert-img" style="transform: scaleX(-1);">
+                            <div class="cert-overlay">
+                                <div class="cert-overlay-icon"><i data-lucide="eye"></i></div>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-date">Ujian UKK</span>
+                            <h3 class="cert-card-title">Uji Kompetensi Keahlian</h3>
+                            <p class="cert-issuer">Samsung Tech Institute & SMKN 1 Bengkulu</p>
+                            <div class="cert-links">
+                                <button class="btn-cert-link open-modal" data-modal="modal-ukk" style="background: none; border: none; cursor: pointer; padding: 0; font-family: inherit;"><i data-lucide="eye"></i> Lihat Dokumentasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doc 2: PKL -->
+                    <div class="certificate-card">
+                        <div class="cert-img-wrapper open-modal" data-modal="modal-pkl" aria-label="Lihat Dokumentasi PKL">
+                            <img src="pkl.jpeg" alt="Praktik Kerja Lapangan" class="cert-img">
+                            <div class="cert-overlay">
+                                <div class="cert-overlay-icon"><i data-lucide="eye"></i></div>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-date">Magang</span>
+                            <h3 class="cert-card-title">Praktik Kerja Lapangan</h3>
+                            <p class="cert-issuer">Waroeng USB NT.COM</p>
+                            <div class="cert-links">
+                                <button class="btn-cert-link open-modal" data-modal="modal-pkl" style="background: none; border: none; cursor: pointer; padding: 0; font-family: inherit;"><i data-lucide="eye"></i> Lihat Dokumentasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doc 3: Pelepasan Siswa -->
+                    <div class="certificate-card">
+                        <div class="cert-img-wrapper open-modal" data-modal="modal-pelepasan" aria-label="Lihat Dokumentasi Pelepasan">
+                            <img src="pelepasan.jpeg" alt="Pelepasan Siswa Angkatan 2026" class="cert-img">
+                            <div class="cert-overlay">
+                                <div class="cert-overlay-icon"><i data-lucide="eye"></i></div>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-date">Kelulusan Siswa</span>
+                            <h3 class="cert-card-title">Pelepasan Siswa Angkatan 2026</h3>
+                            <p class="cert-issuer">SMKN 1 Kota Bengkulu</p>
+                            <div class="cert-links">
+                                <button class="btn-cert-link open-modal" data-modal="modal-pelepasan" style="background: none; border: none; cursor: pointer; padding: 0; font-family: inherit;"><i data-lucide="eye"></i> Lihat Dokumentasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doc 4: Sertifikat Kompetensi BNSP -->
+                    <div class="certificate-card">
+                        <div class="cert-img-wrapper open-modal" data-modal="modal-bnsp" aria-label="Lihat Sertifikat Kompetensi">
+                            <img src="sertifikat-bnsp.jpeg" alt="Sertifikat Kompetensi BNSP - Junior Technical Support" class="cert-img cert-img-top">
+                            <div class="cert-overlay">
+                                <div class="cert-overlay-icon"><i data-lucide="eye"></i></div>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-date">Hasil Dari Uji Kompetensi Keahlian</span>
+                            <h3 class="cert-card-title">Sertifikat Kompetensi BNSP</h3>
+                            <p class="cert-issuer">LSP SMKN 1 Kota Bengkulu</p>
+                            <div class="cert-links">
+                                <button class="btn-cert-link open-modal" data-modal="modal-bnsp" style="background: none; border: none; cursor: pointer; padding: 0; font-family: inherit;"><i data-lucide="eye"></i> Lihat Sertifikat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Pelepasan -->
+        <div class="modal" id="modal-pelepasan" role="dialog" aria-modal="true">
+            <div class="modal-content" style="max-width: 650px;">
+                <button class="close-modal-btn" aria-label="Tutup"><i data-lucide="x"></i></button>
+                <div class="modal-details" style="padding: 2.5rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <span class="modal-category" style="margin-bottom: 0.5rem;">Dokumentasi Kelulusan</span>
+                    <h3 class="modal-title" style="margin-bottom: 1.5rem;">Pelepasan Siswa Angkatan 2026</h3>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 4px 20px rgba(0,0,0,0.3); margin-bottom: 1.5rem; width: 100%;">
+                        <img src="pelepasan.jpeg" alt="Pelepasan Siswa 2026" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Momen kelulusan dan pelepasan siswa angkatan 2026 SMKN 1 Kota Bengkulu, melangkah maju menuju bangku perkuliahan di Universitas Muhammadiyah Bengkulu.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Sertifikat BNSP -->
+        <div class="modal" id="modal-bnsp" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Tutup"><i data-lucide="x"></i></button>
+                <div class="modal-grid">
+                    <div class="modal-gallery modal-gallery-full">
+                        <img src="sertifikat-bnsp.jpeg" alt="Sertifikat Kompetensi BNSP" class="modal-img">
+                    </div>
+                    <div class="modal-details">
+                        <span class="modal-category">Sertifikat Kompetensi / BNSP</span>
+                        <h3 class="modal-title">Junior Technical Support</h3>
+                        <p class="modal-desc">
+                            Sertifikat Kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP) atas nama Muhamad Guntur Ramadhan, diterbitkan melalui Lembaga Sertifikasi Profesi SMKN 1 Bengkulu pada 18 April 2026. Menyatakan kompeten sebagai Junior Technical Support pada bidang pekerjaan Jaringan Komputer.
+                        </p>
+                        <h4 class="modal-subtitle">Detail Sertifikat</h4>
+                        <ul class="modal-features">
+                            <li>No. Sertifikat: 61100.2522.0.0000014.2026</li>
+                            <li>No. Reg.: J.216.00014.2026</li>
+                            <li>Masa berlaku 3 (tiga) tahun sejak Bengkulu, 18 April 2026.</li>
+                            <li>Diterbitkan oleh LSP SMKN 1 Bengkulu atas nama BNSP, Ketua: Dra. Suwarni.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Hubungi Saya</span>
+                    <h2 class="section-title">Mari Berkolaborasi Bersama</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info scroll-reveal">
+                        <h3 class="contact-subtitle">Mari Terhubung!</h3>
+                        <p class="contact-text">
+                            Apakah Anda memiliki pertanyaan mengenai tugas kuliah, ide proyek teknologi informasi, atau ingin berdiskusi dan bertukar wawasan? Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i data-lucide="mail"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Kirim Email</span>
+                                    <a href="mailto:m.guntur2657@gmail.com" class="detail-value">m.guntur2657@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i data-lucide="map-pin"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Lokasi</span>
+                                    <span class="detail-value">Kota Bengkulu, Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper scroll-reveal">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" " class="form-input">
+                                <label for="name" class="form-label">Nama Lengkap</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" " class="form-input">
+                                <label for="email" class="form-label">Email Anda</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" " class="form-input">
+                                <label for="subject" class="form-label">Subjek Pesan</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required placeholder=" " class="form-input text-area"></textarea>
+                                <label for="message" class="form-label">Pesan Anda</label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full" id="submitBtn">
+                                <span id="submitBtnText">Kirim Pesan</span>
+                                <i data-lucide="send" id="btnIcon" class="icon-send"></i>
+                                <span class="spinner-icon" id="submitBtnSpinner" style="display: none;"></span>
+                            </button>
+                            <div id="formFeedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <img src="logo-umb.png" alt="Logo Universitas Muhammadiyah Bengkulu" class="footer-logo">
+            <p class="copyright">&copy; 2026 Muhamad Guntur Ramadhan. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Music Player Widget -->
+    <div class="music-player-widget glass-card collapsed" id="musicWidget">
+        <audio id="bgAudio" loop src="judas.mp3"></audio>
+        
+        <!-- Toggle Button to expand/collapse -->
+        <button class="music-toggle-btn" id="musicToggleBtn" aria-label="Toggle Music Controller">
+            <div class="music-wave-icon" id="musicWaveIcon">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+                <span class="bar bar-4"></span>
+            </div>
+            <i data-lucide="music" class="music-icon-fallback" id="musicIconFallback"></i>
+        </button>
+
+        <div class="player-content">
+            <div class="track-thumb">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=80&q=80" alt="Album Art">
+            </div>
+            <div class="track-details">
+                <span class="track-title">Judas</span>
+                <span class="track-artist">Lady Gaga</span>
+            </div>
+            <div class="player-controls">
+                <button class="control-btn play-btn" id="playBtn" aria-label="Play/Pause">
+                    <i data-lucide="play" class="icon-play"></i>
+                    <i data-lucide="pause" class="icon-pause"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Trailer -->
+    <div class="cursor-trailer" id="cursorTrailer"></div>
+
+    <!-- Tema Turf: elemen -->
+    <div class="turf-track" aria-hidden="true"></div>
+    <div class="turf-fx" id="turfFx" aria-hidden="true"></div>
+
+    <!-- JavaScript File -->
+    <script src="script.js?v=3.23"></script>
+
+</body>
+</html>
